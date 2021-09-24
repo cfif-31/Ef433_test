@@ -31,7 +31,8 @@ namespace Ef433_test.Forms
             UpdateData();
         }
 
-        private void UpdateData() {
+        private void UpdateData()
+        {
             //Очищаем DataGrid
             dgvUsers.Rows.Clear();
             //Перебрали пользователей
@@ -39,28 +40,27 @@ namespace Ef433_test.Forms
             {
                 //Добавили пользователя в DGV, получаем НОМЕР добавляемой строки
                 int r = dgvUsers.Rows.Add(user.UserLogin, user.UserFullName);
-                //Обращаемся к строке по номеру и выставляем ей тег
+                //Записываем информацию о пользователе в ТЕГ
                 dgvUsers.Rows[r].Tag = user;
             }
         }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            //Вызываем форму добавления пользователей, передавая в нее нового пользователя
-            new AddUser(new User()).ShowDialog();
+            //Показываем форму пользователя
+            new UserAddForm(new User()).ShowDialog();
             //Обновляем данные
             UpdateData();
         }
 
         private void btEdit_Click(object sender, EventArgs e)
         {
-            //Проверяем, что выбрана минимум одна (но больше одной быть не может)
+            //Проверяем, что выбрана минимум одна строка
             if (dgvUsers.SelectedRows.Count > 0) {
-                //Получем пользователя из тега строки
+                //Получаем запись о пользователе из строки
                 User user = dgvUsers.SelectedRows[0].Tag as User;
-                //Вызывам форму редактирования пользователя
-                new AddUser(user).ShowDialog();
-                //Обновляем данные
+                //Создаем форму (полученный пользователь) и показываем ее как диалог
+                new UserAddForm(user).ShowDialog();
                 UpdateData();
             }
         }

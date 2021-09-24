@@ -69,7 +69,7 @@ namespace Ef433_test.Forms
             // 
             // btAdd
             // 
-            this.btAdd.Location = new System.Drawing.Point(626, 25);
+            this.btAdd.Location = new System.Drawing.Point(588, 12);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(75, 23);
             this.btAdd.TabIndex = 1;
@@ -79,7 +79,7 @@ namespace Ef433_test.Forms
             // 
             // btEdit
             // 
-            this.btEdit.Location = new System.Drawing.Point(626, 55);
+            this.btEdit.Location = new System.Drawing.Point(588, 41);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(75, 23);
             this.btEdit.TabIndex = 2;

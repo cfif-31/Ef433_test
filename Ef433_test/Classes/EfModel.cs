@@ -11,9 +11,9 @@ namespace Ef433_test.Classes
     {
         private static EfModel Instance;
         public static EfModel Init() {
-            if (Instance == null) {
+            if (Instance == null)
                 Instance = new EfModel();
-            }
+
             return Instance;
         }
         // Your context has been configured to use a 'EfModel' connection string from your application's 

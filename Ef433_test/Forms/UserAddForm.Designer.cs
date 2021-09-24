@@ -1,7 +1,7 @@
 ﻿
 namespace Ef433_test.Forms
 {
-    partial class AddUser
+    partial class UserAddForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,54 +29,54 @@ namespace Ef433_test.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.tbFio = new System.Windows.Forms.TextBox();
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.tbPass = new System.Windows.Forms.TextBox();
-            this.tbFullName = new System.Windows.Forms.TextBox();
-            this.btAdd = new System.Windows.Forms.Button();
+            this.btSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // tbFio
+            // 
+            this.tbFio.Location = new System.Drawing.Point(98, 18);
+            this.tbFio.Name = "tbFio";
+            this.tbFio.Size = new System.Drawing.Size(100, 20);
+            this.tbFio.TabIndex = 0;
             // 
             // tbLogin
             // 
-            this.tbLogin.Location = new System.Drawing.Point(12, 19);
+            this.tbLogin.Location = new System.Drawing.Point(98, 44);
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(219, 20);
-            this.tbLogin.TabIndex = 0;
+            this.tbLogin.Size = new System.Drawing.Size(100, 20);
+            this.tbLogin.TabIndex = 1;
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(12, 46);
+            this.tbPass.Location = new System.Drawing.Point(98, 70);
             this.tbPass.Name = "tbPass";
-            this.tbPass.Size = new System.Drawing.Size(219, 20);
-            this.tbPass.TabIndex = 1;
+            this.tbPass.Size = new System.Drawing.Size(100, 20);
+            this.tbPass.TabIndex = 2;
             // 
-            // tbFullName
+            // btSave
             // 
-            this.tbFullName.Location = new System.Drawing.Point(12, 72);
-            this.tbFullName.Name = "tbFullName";
-            this.tbFullName.Size = new System.Drawing.Size(219, 20);
-            this.tbFullName.TabIndex = 2;
+            this.btSave.Location = new System.Drawing.Point(12, 96);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(186, 23);
+            this.btSave.TabIndex = 3;
+            this.btSave.Text = "button1";
+            this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
-            // btAdd
-            // 
-            this.btAdd.Location = new System.Drawing.Point(12, 98);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(219, 23);
-            this.btAdd.TabIndex = 3;
-            this.btAdd.Text = "Добавить";
-            this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
-            // 
-            // AddUser
+            // UserAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(243, 138);
-            this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.tbFullName);
+            this.ClientSize = new System.Drawing.Size(215, 142);
+            this.Controls.Add(this.btSave);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.tbLogin);
-            this.Name = "AddUser";
-            this.Text = "Adduser";
+            this.Controls.Add(this.tbFio);
+            this.Name = "UserAddForm";
+            this.Text = "UserAddForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,9 +84,9 @@ namespace Ef433_test.Forms
 
         #endregion
 
+        private System.Windows.Forms.TextBox tbFio;
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.TextBox tbPass;
-        private System.Windows.Forms.TextBox tbFullName;
-        private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.Button btSave;
     }
 }
