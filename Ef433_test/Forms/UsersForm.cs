@@ -56,12 +56,33 @@ namespace Ef433_test.Forms
         private void btEdit_Click(object sender, EventArgs e)
         {
             //Проверяем, что выбрана минимум одна строка
-            if (dgvUsers.SelectedRows.Count > 0) {
+            if (dgvUsers.SelectedRows.Count > 0)
+            {
                 //Получаем запись о пользователе из строки
                 User user = dgvUsers.SelectedRows[0].Tag as User;
                 //Создаем форму (полученный пользователь) и показываем ее как диалог
                 new UserAddForm(user).ShowDialog();
                 UpdateData();
+            }
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            //Проверили, что выбрана минимум одна строка (больше их быть и не может)
+            if (dgvUsers.SelectedRows.Count > 0) {
+                //Получили из тега пользователя
+                User user = dgvUsers.SelectedRows[0].Tag as User;
+                //Спрашивем, хочет ли пользователь удалить запись
+                if (MessageBox.Show("Вы хотите удалить пользователя " + user.UserFullName + "?",
+                        "Удаление пользователя", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    //Обращаемся к модели и удаляем из коллекции пользователей запись
+                    EfModel.Init().Users.Remove(user);
+                    //Сохраняем изменения (синхронизируем изменения с БД)
+                    EfModel.Init().SaveChanges();
+                    //Обновляем данные в DGV
+                    UpdateData();
+                }
             }
         }
     }

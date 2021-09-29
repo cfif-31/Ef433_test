@@ -34,6 +34,7 @@ namespace Ef433_test.Forms
             this.FioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btAdd = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
+            this.btDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@ namespace Ef433_test.Forms
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(75, 23);
             this.btAdd.TabIndex = 1;
-            this.btAdd.Text = "button1";
+            this.btAdd.Text = "Add";
             this.btAdd.UseVisualStyleBackColor = true;
             this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
@@ -83,15 +84,26 @@ namespace Ef433_test.Forms
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(75, 23);
             this.btEdit.TabIndex = 2;
-            this.btEdit.Text = "button1";
+            this.btEdit.Text = "Change";
             this.btEdit.UseVisualStyleBackColor = true;
             this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
+            // 
+            // btDelete
+            // 
+            this.btDelete.Location = new System.Drawing.Point(588, 70);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(75, 23);
+            this.btDelete.TabIndex = 3;
+            this.btDelete.Text = "Delete";
+            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // UsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.dgvUsers);
@@ -109,6 +121,7 @@ namespace Ef433_test.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn FioColumn;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Button btEdit;
+        private System.Windows.Forms.Button btDelete;
     }
 }
 
