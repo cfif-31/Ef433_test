@@ -35,8 +35,10 @@ namespace Ef433_test.Forms
         {
             //Очищаем DataGrid
             dgvUsers.Rows.Clear();
-            //Перебрали пользователей
-            foreach (User user in EfModel.Init().Users)
+            //Перебрали пользователей - с условием, ГДЕ (where) имя пользователя или логин содержит поисковой запрос
+            foreach (User user in EfModel.Init().Users
+                .Where(u=>u.UserFullName.Contains(tbSearch.Text) || u.UserLogin.Contains(tbSearch.Text)))
+                
             {
                 //Добавили пользователя в DGV, получаем НОМЕР добавляемой строки
                 int r = dgvUsers.Rows.Add(user.UserLogin, user.UserFullName);
@@ -84,6 +86,13 @@ namespace Ef433_test.Forms
                     UpdateData();
                 }
             }
+        }
+
+        //При изменении поискового запроса
+        private void tbSearchChangeEvent(object sender, EventArgs e)
+        {
+            //Перезагружаем данные
+            UpdateData();
         }
     }
 }
