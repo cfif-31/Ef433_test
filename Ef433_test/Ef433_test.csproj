@@ -67,6 +67,12 @@
     <Compile Include="Forms\AutorizateForm.Designer.cs">
       <DependentUpon>AutorizateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AutorizateForm.resx">
       <DependentUpon>AutorizateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserAddForm.resx">
       <DependentUpon>UserAddForm.cs</DependentUpon>

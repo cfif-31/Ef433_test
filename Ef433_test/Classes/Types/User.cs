@@ -9,7 +9,8 @@ namespace Ef433_test.Classes.Types
 {
     public class User
     {
-        public enum userType:sbyte { 
+        public enum userType : sbyte
+        {
             user,
             admin
         }
@@ -22,5 +23,11 @@ namespace Ef433_test.Classes.Types
         [Required, MaxLength(32)]
         public string UserPass { get; set; }
         public userType UserType { get; set; }
+        public virtual List<Order> Orders { get; set; }
+        public User()
+        {
+            Orders = new List<Order>();
+        }
     }
 }
+

@@ -17,7 +17,7 @@ namespace Ef433_test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AutorizateForm());
+            Application.Run(new Orders());
         }
     }
 }
