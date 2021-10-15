@@ -9,6 +9,10 @@ namespace Ef433_test.Classes.Types
 {
     public class User
     {
+        public enum userType:sbyte { 
+            user,
+            admin
+        }
         [Key]
         public int UserId { get; set; }
         [Required, MaxLength(128)]
@@ -17,6 +21,6 @@ namespace Ef433_test.Classes.Types
         public string UserLogin { get; set; }
         [Required, MaxLength(32)]
         public string UserPass { get; set; }
-
+        public userType UserType { get; set; }
     }
 }

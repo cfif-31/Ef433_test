@@ -32,6 +32,7 @@ namespace Ef433_test.Classes
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
     }
 
     //public class MyEntity

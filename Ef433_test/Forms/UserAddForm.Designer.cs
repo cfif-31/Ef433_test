@@ -33,6 +33,7 @@ namespace Ef433_test.Forms
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.btSave = new System.Windows.Forms.Button();
+            this.cbUserType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // tbFio
@@ -58,7 +59,7 @@ namespace Ef433_test.Forms
             // 
             // btSave
             // 
-            this.btSave.Location = new System.Drawing.Point(12, 96);
+            this.btSave.Location = new System.Drawing.Point(12, 147);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(186, 23);
             this.btSave.TabIndex = 3;
@@ -66,11 +67,24 @@ namespace Ef433_test.Forms
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
+            // cbUserType
+            // 
+            this.cbUserType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUserType.FormattingEnabled = true;
+            this.cbUserType.Items.AddRange(new object[] {
+            "Пользователь",
+            "Администратор"});
+            this.cbUserType.Location = new System.Drawing.Point(98, 96);
+            this.cbUserType.Name = "cbUserType";
+            this.cbUserType.Size = new System.Drawing.Size(100, 21);
+            this.cbUserType.TabIndex = 4;
+            // 
             // UserAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(215, 142);
+            this.ClientSize = new System.Drawing.Size(215, 182);
+            this.Controls.Add(this.cbUserType);
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.tbLogin);
@@ -88,5 +102,6 @@ namespace Ef433_test.Forms
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Button btSave;
+        private System.Windows.Forms.ComboBox cbUserType;
     }
 }

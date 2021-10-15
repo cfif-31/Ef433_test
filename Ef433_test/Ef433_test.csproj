@@ -58,12 +58,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\EfModel.cs" />
+    <Compile Include="Classes\Types\Order.cs" />
+    <Compile Include="Classes\Types\Product.cs" />
     <Compile Include="Classes\Types\User.cs" />
+    <Compile Include="Forms\AutorizateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AutorizateForm.Designer.cs">
+      <DependentUpon>AutorizateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\UserAddForm.Designer.cs">
       <DependentUpon>UserAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserInfoForm.Designer.cs">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UsersForm.cs">
       <SubType>Form</SubType>
@@ -74,8 +88,14 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AutorizateForm.resx">
+      <DependentUpon>AutorizateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserAddForm.resx">
       <DependentUpon>UserAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserInfoForm.resx">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>

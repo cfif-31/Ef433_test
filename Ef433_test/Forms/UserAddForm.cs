@@ -32,6 +32,7 @@ namespace Ef433_test.Forms
             EditedUser.UserLogin = tbLogin.Text;
             EditedUser.UserPass = tbPass.Text;
             EditedUser.UserFullName = tbFio.Text;
+            EditedUser.UserType = (User.userType)cbUserType.SelectedIndex;
 
             //Если пользователь новый (id пустой)
             if (EditedUser.UserId == 0)
